@@ -1,0 +1,6 @@
+Dataset,Bearing_Sensor,Fault_Type,RMS_Alarm_Hours,SVM_Alarm_Hours,Anomaly_Lead_vs_RMS_Hours,Interpretation,Bearing
+IMS Test 2,Bearing 1,Outer_Race,89.0,84.6667,4.333299999999994,Primary Test 2 early-anomaly result,
+IMS Test 1,Bearing3_Ch5,Inner_Race,135.96,44.43138888888889,91.52861111111112,"Independent protocol validation; early anomaly lead, not RUL prediction",Bearing_3
+IMS Test 1,Bearing3_Ch6,Inner_Race,243.18000000000004,32.598055555555554,210.58194444444447,"Independent protocol validation; early anomaly lead, not RUL prediction",Bearing_3
+IMS Test 1,Bearing4_Ch7,Rolling_Element,180.51944444444447,29.598055555555558,150.9213888888889,"Independent protocol validation; early anomaly lead, not RUL prediction",Bearing_4
+IMS Test 1,Bearing4_Ch8,Rolling_Element,242.51333333333338,80.71861111111112,161.79472222222228,"Independent protocol validation; early anomaly lead, not RUL prediction",Bearing_4
