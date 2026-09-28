@@ -1,0 +1,12 @@
+Finding_ID,Phase,Finding,Value,Unit
+P1_BINARY_RMS,Phase I,Conventional RMS threshold mean-fold balanced accuracy,0.875,proportion
+P1_BINARY_LR,Phase I,Logistic Regression binary mean-fold balanced accuracy,1.0,proportion
+P1_BINARY_RF,Phase I,Random Forest binary mean-fold balanced accuracy,1.0,proportion
+P1_BINARY_XGB,Phase I,XGBoost binary mean-fold balanced accuracy,0.9958,proportion
+P1_MULTI_RF,Phase I,Random Forest multiclass mean balanced accuracy,1.0,proportion
+P1_MULTI_XGB,Phase I,XGBoost multiclass mean balanced accuracy,0.975,proportion
+P1_MULTI_LR,Phase I,Logistic Regression multiclass mean balanced accuracy,0.9312,proportion
+P2_TEST2_SVM,Phase II,IMS Test 2 One-Class SVM anomaly lead relative to RMS,4.3333,hours
+P2_SENSITIVITY,Phase II,Test 2 sensitivity configurations where SVM alarmed earlier than RMS,9.0,of 12 configurations
+P2_TEST1_MIN,Phase II,Minimum Test 1 sensor-trajectory anomaly lead,91.52861111111112,monitored hours
+P2_TEST1_MAX,Phase II,Maximum Test 1 sensor-trajectory anomaly lead,210.58194444444447,monitored hours
