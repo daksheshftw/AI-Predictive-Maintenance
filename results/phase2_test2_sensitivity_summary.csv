@@ -1,0 +1,4 @@
+Method,Configurations,Mean_Lead_Time,Median_Lead_Time,Min_Lead_Time,Max_Lead_Time,Earlier_Than_RMS,Same_As_RMS,Later_Than_RMS
+Isolation Forest,12,-15.944444444444448,-15.75,-26.66666666666667,-7.5,0,0,12
+Local Outlier Factor,12,-0.06944444444444405,0.0,-0.8333333333333286,0.0,0,11,1
+One-Class SVM,12,16.791666666666664,2.9166666666666643,0.0,61.33333333333333,9,3,0
