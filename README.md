@@ -8,6 +8,7 @@
   <a href="notebooks/01_cwru_fault_detection.ipynb"><img src="https://img.shields.io/badge/Phase%20I-CWRU%20Fault%20Detection-2ea44f?style=for-the-badge" alt="Phase I CWRU" /></a>
   <a href="notebooks/02_ims_early_warning.ipynb"><img src="https://img.shields.io/badge/Phase%20II-NASA%20IMS%20Early%20Warning-0969da?style=for-the-badge" alt="Phase II IMS" /></a>
   <a href="results/FINAL_master_results.csv"><img src="https://img.shields.io/badge/Results-Reproducible-orange?style=for-the-badge" alt="Reproducible results" /></a>
+  <a href="paper/README.md"><img src="https://img.shields.io/badge/Research-Read%20Manuscript-6f42c1?style=for-the-badge" alt="Read research manuscript" /></a>
 </p>
 
 <p>
@@ -19,6 +20,7 @@
 </p>
 
 <p>
+  <a href="paper/README.md">Research paper</a> ·
   <a href="#key-results">Key results</a> ·
   <a href="#visual-results">Figures</a> ·
   <a href="#methodology">Methodology</a> ·
@@ -158,6 +160,7 @@ For the selected CWRU subset, normal recordings acquired at 48 kHz are resampled
 ```text
 AI-Predictive-Maintenance/
 ├── README.md
+├── CITATION.cff
 ├── requirements.txt
 ├── .gitignore
 ├── data/
@@ -165,6 +168,8 @@ AI-Predictive-Maintenance/
 ├── notebooks/
 │   ├── 01_cwru_fault_detection.ipynb
 │   └── 02_ims_early_warning.ipynb
+├── paper/
+│   └── README.md
 ├── results/
 │   ├── FINAL_master_results.csv
 │   ├── FINAL_key_findings.csv
@@ -180,6 +185,7 @@ AI-Predictive-Maintenance/
 
 | Resource | Description |
 |---|---|
+| [Research manuscript](paper/README.md) | Full manuscript overview, abstract, research questions, findings and citation |
 | [01 · CWRU fault detection](notebooks/01_cwru_fault_detection.ipynb) | Phase I feature engineering, classification and LOLO validation |
 | [02 · IMS early warning](notebooks/02_ims_early_warning.ipynb) | Phase II IMS data setup and early-warning workflow |
 | [Master results table](results/FINAL_master_results.csv) | Consolidated Phase I and Phase II metrics |
