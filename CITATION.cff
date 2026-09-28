@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use or reference this project, please cite the research manuscript."
+title: "Machine Learning-Based Vibration Fault Detection in Rolling Element Bearings"
+type: software
+authors:
+  - family-names: "Das"
+    given-names: "Dakshesh"
+repository-code: "https://github.com/daksheshftw/AI-Predictive-Maintenance"
+url: "https://github.com/daksheshftw/AI-Predictive-Maintenance"
+date-released: "2026-09-29"
+keywords:
+  - predictive maintenance
+  - vibration analysis
+  - bearing fault diagnosis
+  - machine learning
+  - anomaly detection
+  - mechanical engineering
+abstract: >-
+  A leakage-aware comparison of conventional RMS vibration thresholding
+  with classical machine-learning fault detection and chronological
+  early-anomaly warning using CWRU and NASA IMS bearing datasets.
