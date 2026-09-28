@@ -1,0 +1,18 @@
+Parameter,Value
+Healthy baseline duration,First 24 monitored hours
+Feature 1,RMS
+Feature 2,Peak
+Feature 3,Peak-to-Peak
+Feature 4,Skewness
+Feature 5,Kurtosis (Pearson; fisher=False)
+Feature 6,Crest Factor
+Scaler,RobustScaler fit on healthy baseline only
+ML model,One-Class SVM
+SVM kernel,RBF
+SVM gamma,scale
+SVM nu,0.01
+ML alarm threshold,99th percentile of baseline anomaly scores
+Persistence rule,3 consecutive threshold exceedances
+Conventional RMS threshold,Healthy RMS mean + 3 standard deviations
+Test 1 shutdown-gap handling,Intervals >10 min capped at 10 min for monitored-time reconstruction; persistence reset after gaps >20 min
+Test 1 preprocessing exclusion,IMS Test 1 recordings 1–156 excluded because of documented acquisition discontinuity
