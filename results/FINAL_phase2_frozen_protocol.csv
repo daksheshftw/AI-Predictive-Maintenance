@@ -15,4 +15,4 @@ ML alarm threshold,99th percentile of baseline anomaly scores
 Persistence rule,3 consecutive threshold exceedances
 Conventional RMS threshold,Healthy RMS mean + 3 standard deviations
 Test 1 shutdown-gap handling,Intervals >10 min capped at 10 min for monitored-time reconstruction; persistence reset after gaps >20 min
-Test 1 preprocessing exclusion,IMS Test 1 recordings 1–156 excluded because of documented acquisition discontinuity
+Test 1 preprocessing exclusion,IMS Test 1 recordings 1–156 excluded because an observed ~148 h acquisition gap separated them from the subsequent monitoring sequence
