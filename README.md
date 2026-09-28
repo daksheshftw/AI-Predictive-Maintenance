@@ -4,10 +4,10 @@
 
 **Author:** Dakshesh Das
 
-This project investigates whether multivariate machine-learning methods can improve bearing condition monitoring beyond conventional RMS vibration thresholds. The work is split into two complementary phases:
+This project investigates whether multivariate machine-learning methods can improve bearing condition monitoring beyond conventional RMS vibration thresholds. It combines a seeded-fault benchmark with run-to-failure bearing data to evaluate both **fault-detection robustness** and **early anomaly warning**.
 
-- **Phase I — Fault detection and diagnosis:** CWRU seeded-fault bearing data are used to compare conventional RMS thresholding with Logistic Regression, Random Forest, and XGBoost under leave-one-load-out validation.
-- **Phase II — Early anomaly warning:** NASA IMS run-to-failure bearing trajectories are used to compare persistent multivariate anomaly detection with conventional RMS escalation.
+- **Phase I — CWRU:** Logistic Regression, Random Forest, and XGBoost are compared with conventional RMS thresholding using leave-one-load-out validation.
+- **Phase II — NASA IMS:** persistent multivariate anomaly detection is compared with conventional RMS escalation on chronological run-to-failure trajectories.
 
 The central engineering question is not simply whether a model can classify faults, but whether it remains useful under operating-condition shifts and whether multivariate changes can be detected before a conventional vibration threshold alarms.
 
@@ -25,7 +25,7 @@ The central engineering question is not simply whether a model can classify faul
 | Random Forest | Multiclass diagnosis | 1.0000 | 1.0000 |
 | XGBoost | Multiclass diagnosis | 0.9750 | 0.9742 |
 
-The fixed RMS baseline detected all fault windows but generated false alarms when the held-out 0 HP healthy condition shifted above the threshold learned from the other loads. Multivariate models were substantially more robust on this selected benchmark.
+The fixed RMS baseline detected all fault windows but generated false alarms when the held-out 0 HP healthy condition shifted above the threshold learned from the other loads. Multivariate models were more robust on this selected benchmark.
 
 ### Phase II — NASA IMS early-anomaly analysis
 
@@ -39,9 +39,25 @@ Using a 24-hour healthy baseline, RobustScaler fitted only on baseline data, a O
 | IMS Test 1 — Bearing 4 Ch. 7 | 180.52 h | 29.60 h | **+150.92 h** |
 | IMS Test 1 — Bearing 4 Ch. 8 | 242.51 h | 80.72 h | **+161.79 h** |
 
-These values are **apparent early-anomaly leads relative to the RMS alarm**, not remaining-useful-life predictions or proof that physical failure was predictable at those exact times. Test 1 contains four sensor trajectories from two failed physical bearings.
+These are **apparent early-anomaly leads relative to the RMS alarm**, not remaining-useful-life predictions or proof that physical failure was predictable at those exact times. Test 1 contains four sensor trajectories from two failed physical bearings.
 
 A Test 2 sensitivity study varied healthy-baseline duration and anomaly-score quantile across 12 configurations per model. One-Class SVM alarmed earlier than RMS in 9/12 configurations and at the same time in 3/12, with lead times ranging from 0 to 61.33 hours. This demonstrates that early-warning conclusions are calibration-sensitive.
+
+## Visual Results
+
+### Binary fault detection across held-out loads
+
+![Binary fault detection balanced accuracy by load](figures/binary_fault_detection_balanced_accuracy_by_load.png)
+
+### Multiclass diagnosis across held-out loads
+
+![Multiclass model comparison by load](figures/multiclass_model_comparison_by_load.png)
+
+### Phase II early-anomaly lead relative to RMS
+
+![Phase II early anomaly lead](figures/final_phase2_early_anomaly_lead.png)
+
+Additional degradation plots and model-comparison figures are available in the [figures](figures/) directory.
 
 ## Methodology
 
@@ -80,12 +96,21 @@ AI-Predictive-Maintenance/
 ├── results/
 │   ├── FINAL_master_results.csv
 │   ├── FINAL_key_findings.csv
+│   ├── phase1_feature_dataset.csv
 │   └── ...
-├── figures/
-│   └── selected publication figures
-└── paper/
-    └── research paper
+└── figures/
+    └── 9 analysis and publication figures
 ```
+
+## Results and Code
+
+- [CWRU fault-detection notebook](notebooks/01_cwru_fault_detection.ipynb)
+- [IMS early-warning notebook](notebooks/02_ims_early_warning.ipynb)
+- [Master results table](results/FINAL_master_results.csv)
+- [Key findings](results/FINAL_key_findings.csv)
+- [Phase I feature dataset](results/phase1_feature_dataset.csv)
+- [Phase II Test 1 validation](results/phase2_test1_validation.csv)
+- [Phase II Test 2 sensitivity analysis](results/phase2_test2_sensitivity_full.csv)
 
 ## Datasets
 
@@ -97,9 +122,9 @@ https://engineering.case.edu/bearingdatacenter/welcome
 **NASA IMS Bearings:**  
 https://data.nasa.gov/dataset/ims-bearings
 
-See [data/README.md](data/README.md) for the exact subset and preprocessing assumptions used in this project.
+See [data/README.md](data/README.md) for the selected subset and preprocessing assumptions used in this project.
 
-## Reproduction
+## Environment
 
 Create a Python environment and install the project dependencies:
 
@@ -109,12 +134,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Download the original datasets from their official sources and place them in the local data directories described in `data/README.md`. The raw data directories are excluded from version control.
-
-Run the notebooks in order:
-
-1. `notebooks/01_cwru_fault_detection.ipynb`
-2. `notebooks/02_ims_early_warning.ipynb`
+The CWRU notebook contains the cleaned Phase I analysis workflow. The IMS notebook contains the cleaned Phase II data setup and discovery workflow from the available project notebook; the exported Phase II experimental results and sensitivity analyses are preserved in the `results/` directory. Raw datasets must be downloaded separately from their original sources.
 
 ## Tools
 
