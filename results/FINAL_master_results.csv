@@ -1,0 +1,46 @@
+Phase,Dataset,Task,Method,Trajectory,Metric,Value,Unit
+Phase I,CWRU,Binary fault detection,RMS Threshold,,Overall_Accuracy,0.967741935483871,proportion
+Phase I,CWRU,Binary fault detection,RMS Threshold,,Sensitivity,1.0,proportion
+Phase I,CWRU,Binary fault detection,RMS Threshold,,Specificity,0.8571428571428571,proportion
+Phase I,CWRU,Binary fault detection,RMS Threshold,,F1,0.979591836734694,proportion
+Phase I,CWRU,Binary fault detection,RMS Threshold,,False_Alarm_Rate,0.1428571428571428,proportion
+Phase I,CWRU,Binary fault detection,RMS Threshold,,Balanced_Accuracy,0.9285714285714286,proportion
+Phase I,CWRU,Binary fault detection,RMS Threshold,,Mean_Fold_Balanced_Accuracy,0.875,proportion
+Phase I,CWRU,Binary fault detection,Logistic Regression,,Overall_Accuracy,1.0,proportion
+Phase I,CWRU,Binary fault detection,Logistic Regression,,Sensitivity,1.0,proportion
+Phase I,CWRU,Binary fault detection,Logistic Regression,,Specificity,1.0,proportion
+Phase I,CWRU,Binary fault detection,Logistic Regression,,F1,1.0,proportion
+Phase I,CWRU,Binary fault detection,Logistic Regression,,False_Alarm_Rate,0.0,proportion
+Phase I,CWRU,Binary fault detection,Logistic Regression,,Balanced_Accuracy,1.0,proportion
+Phase I,CWRU,Binary fault detection,Logistic Regression,,Mean_Fold_Balanced_Accuracy,1.0,proportion
+Phase I,CWRU,Binary fault detection,Random Forest,,Overall_Accuracy,1.0,proportion
+Phase I,CWRU,Binary fault detection,Random Forest,,Sensitivity,1.0,proportion
+Phase I,CWRU,Binary fault detection,Random Forest,,Specificity,1.0,proportion
+Phase I,CWRU,Binary fault detection,Random Forest,,F1,1.0,proportion
+Phase I,CWRU,Binary fault detection,Random Forest,,False_Alarm_Rate,0.0,proportion
+Phase I,CWRU,Binary fault detection,Random Forest,,Balanced_Accuracy,1.0,proportion
+Phase I,CWRU,Binary fault detection,Random Forest,,Mean_Fold_Balanced_Accuracy,1.0,proportion
+Phase I,CWRU,Binary fault detection,XGBoost,,Overall_Accuracy,0.9935483870967742,proportion
+Phase I,CWRU,Binary fault detection,XGBoost,,Sensitivity,0.9916666666666668,proportion
+Phase I,CWRU,Binary fault detection,XGBoost,,Specificity,1.0,proportion
+Phase I,CWRU,Binary fault detection,XGBoost,,F1,0.99581589958159,proportion
+Phase I,CWRU,Binary fault detection,XGBoost,,False_Alarm_Rate,0.0,proportion
+Phase I,CWRU,Binary fault detection,XGBoost,,Balanced_Accuracy,0.9958333333333332,proportion
+Phase I,CWRU,Binary fault detection,XGBoost,,Mean_Fold_Balanced_Accuracy,0.9958333333333332,proportion
+Phase I,CWRU,Multiclass fault diagnosis,Random Forest,,Mean_Accuracy,1.0,proportion
+Phase I,CWRU,Multiclass fault diagnosis,Random Forest,,Mean_Balanced_Accuracy,1.0,proportion
+Phase I,CWRU,Multiclass fault diagnosis,Random Forest,,Mean_Macro_F1,1.0,proportion
+Phase I,CWRU,Multiclass fault diagnosis,Random Forest,,Overall_Accuracy,1.0,proportion
+Phase I,CWRU,Multiclass fault diagnosis,XGBoost,,Mean_Accuracy,0.975,proportion
+Phase I,CWRU,Multiclass fault diagnosis,XGBoost,,Mean_Balanced_Accuracy,0.975,proportion
+Phase I,CWRU,Multiclass fault diagnosis,XGBoost,,Mean_Macro_F1,0.97405,proportion
+Phase I,CWRU,Multiclass fault diagnosis,XGBoost,,Overall_Accuracy,0.9741935483870968,proportion
+Phase I,CWRU,Multiclass fault diagnosis,Logistic Regression,,Mean_Accuracy,0.93125,proportion
+Phase I,CWRU,Multiclass fault diagnosis,Logistic Regression,,Mean_Balanced_Accuracy,0.93125,proportion
+Phase I,CWRU,Multiclass fault diagnosis,Logistic Regression,,Mean_Macro_F1,0.90885,proportion
+Phase I,CWRU,Multiclass fault diagnosis,Logistic Regression,,Overall_Accuracy,0.9290322580645162,proportion
+Phase II,IMS Test 2,Early anomaly warning,One-Class SVM vs RMS,Bearing 1,Anomaly_Lead_vs_RMS,4.333299999999994,monitored hours
+Phase II,IMS Test 1,Early anomaly warning,One-Class SVM vs RMS,Bearing3_Ch5,Anomaly_Lead_vs_RMS,91.52861111111112,monitored hours
+Phase II,IMS Test 1,Early anomaly warning,One-Class SVM vs RMS,Bearing3_Ch6,Anomaly_Lead_vs_RMS,210.58194444444447,monitored hours
+Phase II,IMS Test 1,Early anomaly warning,One-Class SVM vs RMS,Bearing4_Ch7,Anomaly_Lead_vs_RMS,150.9213888888889,monitored hours
+Phase II,IMS Test 1,Early anomaly warning,One-Class SVM vs RMS,Bearing4_Ch8,Anomaly_Lead_vs_RMS,161.79472222222228,monitored hours
